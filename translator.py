@@ -39,11 +39,6 @@ def get_and_translate(url):
     )
     # Clean up output formatting
     translation = translation.split("</s>")[-2].split("<s>")[-1].strip()
-
-#     print(
-#         "Length of the input document: {}".format(len(article_text.split(" ")))
-#     )
-#     print("Length of the summary: {}".format(len(summary.split(" "))))
     print("Summary: ")
     print(summary)
 
