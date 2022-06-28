@@ -8,7 +8,6 @@ def translate(input_text, min_length, max_length, model, tokenizer):
     inputs = tokenizer(
     "translate English to German: Hugging Face is a technology company based in New York and Paris",
     return_tensors="pt")
-    # Generating the summary.
     outputs = model.generate(inputs["input_ids"], max_length=max_length, num_beams=4, early_stopping=True)
     return tokenizer.decode(outputs[0], skip_special_tokens=True)
 
@@ -44,11 +43,6 @@ def get_and_translate(url):
 
 
 def get_article_text(wiki_url):
-    """
-    It takes a Wikipedia URL and returns the text of the article
-    :param wiki_url: The URL of the Wikipedia article you want to scrape
-    :return: A string of the article text
-    """
     # Get article from Wiki
     page = requests.get(wiki_url)
     soup = BeautifulSoup(page.content, "html.parser")
