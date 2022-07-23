@@ -1,4 +1,4 @@
-from wiki_summarizer import get_article_text, summarize
+from translator import get_article_text, get_and_translate
 from click.testing import CliRunner
 
 
