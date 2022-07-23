@@ -15,7 +15,7 @@ def test_get_article_text():
 def test_summarize():
     runner = CliRunner()
     result = runner.invoke(
-        translate,
+        get_and_translate,
         ["https://en.wikipedia.org/wiki/Monarchy_of_Germany"],
     )
     assert len(result.output) > 20
