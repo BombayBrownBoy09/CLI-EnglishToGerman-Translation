@@ -21,7 +21,6 @@ def translate(input_text, min_length, max_length, model, tokenizer):
 def get_and_translate(url):
     """
     It takes a URL, downloads the article text, and translates it to german
-    :param url: The URL of the article you want to summarize
     """
     # Load model & tokenizer
     model = model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
