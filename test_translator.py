@@ -12,7 +12,7 @@ def test_get_article_text():
     assert len(article_txt) > 100
 
 
-def test_summarize():
+def test_translation():
     runner = CliRunner()
     result = runner.invoke(
         get_and_translate,
