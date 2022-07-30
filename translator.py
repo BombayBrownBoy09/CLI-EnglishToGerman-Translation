@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import click
-from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+from transformers import pipeline
 
 
 def translate(article_text):
