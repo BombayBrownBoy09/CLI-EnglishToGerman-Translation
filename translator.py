@@ -37,8 +37,8 @@ def get_and_translate(url):
     )
     # Clean up output formatting
     translation = translation.split("</s>")[-2].split("<s>")[-1].strip()
-    print("Summary: ")
-    print(summary)
+    print("Translation: ")
+    print(translation)
 
 
 def get_article_text(wiki_url):
