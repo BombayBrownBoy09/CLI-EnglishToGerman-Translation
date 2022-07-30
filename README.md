@@ -1,6 +1,6 @@
 # CLI-EnglishToGerman-Translation
 
-[![build](https://github.com/BombayBrownBoy09/CLI-EnglishToGerman-Translation/blob/main/.github/workflows/main.yml/badge.svg?branch=main)](https://github.com/BombayBrownBoy09/CLI-EnglishToGerman-Translation/blob/main/.github/workflows/main.yml)
+![build](https://github.com/BombayBrownBoy09/CLI-EnglishToGerman-Translation/blob/main/.github/workflows/main.yml/badge.svg)
 
 Hugging Face Library pre-trained model used
 
