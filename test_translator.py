@@ -22,7 +22,7 @@ def test_get_article_text():
 #     )
 #     assert len(result.output) > 20
 
-def get_and_translate():
+def test_get_and_translate():
     article_txt = get_article_text(
         "https://en.wikipedia.org/wiki/Monarchy_of_Germany"
     )
