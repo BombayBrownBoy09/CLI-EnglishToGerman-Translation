@@ -5,10 +5,13 @@ from transformers import pipeline
 
 
 def translate(article_text):
+    article_sentences = article_text.split('.')
+    output = ''
     translator = pipeline("translation_en_to_de")
-    translation = translator(article_text)
-    return translation
-
+    for sentence in article_sentences:
+      translation = translator(sentence)
+      output += list(translation[0].values())[0]
+    return output
 
 @click.command()
 @click.option(
