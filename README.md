@@ -1,9 +1,12 @@
 # CLI-EnglishToGerman-Translation
 
-* Continuous Integration with GithubAction
+[![build](https://github.com/BombayBrownBoy09/CLI-EnglishToGerman-Translation/blob/main/.github/workflows/main.yml/badge.svg?branch=main)](https://github.com/BombayBrownBoy09/CLI-EnglishToGerman-Translation/blob/main/.github/workflows/main.yml)
 
 Hugging Face Library pre-trained model used
 
-### Translation
+### Wikipedia Article
+![Article](article.png)
+
+### Translation Results
 
 ![pre trained model translating english to german](translating.png)
