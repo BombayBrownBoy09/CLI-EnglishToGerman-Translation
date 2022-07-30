@@ -17,4 +17,4 @@ def test_get_and_translate():
         "https://en.wikipedia.org/wiki/Monarchy_of_Germany"
     )
     translation = translate(article_txt)
-    assert 'Titel Deutscher Kaiser' in list(translation[0].values())[0]
+    assert 'Titel Deutscher Kaiser' in translation
