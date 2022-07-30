@@ -20,20 +20,11 @@ def get_and_translate(url):
     """
     It takes a URL, downloads the article text, and translates it to german
     """
-    # Load model & tokenizer
-#     model = model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
-#     tokenizer = AutoTokenizer.from_pretrained("t5-base")
-    
-#     # Set desired target min and max length for translation (not strict bounds)
-#     min_length = 50
-#     max_length = 200
     
     # translate
     article_text = get_article_text(url)
     translation = translate(
         article_text)
-    # Clean up output formatting
-#     translation = translation.split("</s>")[-2].split("<s>")[-1].strip()
     print("Translation: ")
     print(translation)
 
