@@ -16,6 +16,7 @@ def test_translation():
     runner = CliRunner()
     result = runner.invoke(
         get_and_translate,
+        ["https://en.wikipedia.org/wiki/Monarchy_of_Germany"],
     )
     assert result.output.__contains__(
         "Monarchie Deutschlands"
