@@ -19,6 +19,6 @@ def test_translation():
         ["https://en.wikipedia.org/wiki/Monarchy_of_Germany"],
     )
     assert result.output.__contains__(
-        "монархия"
+        "Monarchie Deutschlands"
     )
     assert len(result.output) > 20
