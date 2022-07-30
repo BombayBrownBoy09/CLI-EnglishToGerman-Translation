@@ -1,6 +1,6 @@
 # CLI-EnglishToGerman-Translation
 
-[![Build test with Github Actions](https://github.com/omartinez182/AutoML-Modern-Art-Classification/actions/workflows/main.yml/badge.svg)](https://github.com/omartinez182/AutoML-Modern-Art-Classification/actions/workflows/main.yml)
+[![Build test with Github Actions](https://github.com/BombayBrownBoy09/CLI-EnglishToGerman-Translation/actions/workflows/main.yml/badge.svg)](https://github.com/BombayBrownBoy09/CLI-EnglishToGerman-Translation/actions/workflows/main.yml)
 
 Hugging Face Library pre-trained model used
 
