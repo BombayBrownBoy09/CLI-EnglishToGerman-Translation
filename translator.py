@@ -4,11 +4,10 @@ import click
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 
-def translate(input_text, min_length, max_length, model, tokenizer):
-    inputs = tokenizer(
-    input_text, return_tensors="pt", max_length=1024, truncation=True)
-    outputs = model.generate(inputs["input_ids"], max_length=max_length, num_beams=4, early_stopping=True)
-    return tokenizer.decode(outputs[0], skip_special_tokens=True)
+def translate(article_text):
+    translator = pipeline("translation_en_to_de")
+    translation = translator(article_text)
+    return translation
 
 
 @click.command()
@@ -22,21 +21,19 @@ def get_and_translate(url):
     It takes a URL, downloads the article text, and translates it to german
     """
     # Load model & tokenizer
-    model = model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
-    tokenizer = AutoTokenizer.from_pretrained("t5-base")
+#     model = model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
+#     tokenizer = AutoTokenizer.from_pretrained("t5-base")
     
-    # Set desired target min and max length for translation (not strict bounds)
-    min_length = 50
-    max_length = 200
+#     # Set desired target min and max length for translation (not strict bounds)
+#     min_length = 50
+#     max_length = 200
     
     # translate
     article_text = get_article_text(url)
     translation = translate(
-        article_text, min_length, max_length, model, tokenizer
-    )
+        article_text)
     # Clean up output formatting
-    translation = translation.split("</s>")[-2].split("<s>")[-1].strip()
-    translation = 'Monarchie Deutschlands'
+#     translation = translation.split("</s>")[-2].split("<s>")[-1].strip()
     print("Translation: ")
     print(translation)
 
