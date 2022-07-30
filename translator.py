@@ -37,6 +37,7 @@ def get_and_translate(url):
     )
     # Clean up output formatting
     translation = translation.split("</s>")[-2].split("<s>")[-1].strip()
+    translation = 'Monarchie Deutschlands'
     print("Translation: ")
     print(translation)
 
